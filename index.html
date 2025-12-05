@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta-name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Timer</h1>
+      <button id="permBtn" class="btn ghost">Notifications</button>
+    </header>
+
+    <section class="card">
+      <div class="controls">
+        <input id="secondsInput" type="number" min="1" placeholder="Enter seconds" inputmode="numeric">
+        <div class="actions">
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="pauseBtn" class="btn ghost" disabled>Pause</button>
+          <button id="resetBtn" class="btn ghost" disabled>Reset</button>
+        </div>
+      </div>
+
+      <div class="visual">
+        <svg class="ring" viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="52" stroke-width="12" fill="none"></circle>
+          <circle class="ring-fg" cx="60" cy="60" r="52" stroke-width="12" fill="none" stroke-linecap="round"></circle>
+        </svg>
+
+        <div class="time" id="display">00:00</div>
+      </div>
+
+      <p class="note">A notification and alert sound will play when the timer ends.</p>
+    </section>
+
+    <footer class="footer">
+      <small>JavaScript • Notification API • Web Audio API</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
